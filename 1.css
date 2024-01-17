@@ -1,0 +1,770 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+.main{
+  position: relative;
+  z-index: 10;
+}
+.kalla{
+  display:none;
+}
+.first{
+  min-height:100vh;
+  width:100%;
+  background-color: rgb(249, 249, 246);
+  padding:0 3vw;
+}
+nav{
+  padding:0 0vw;
+  height:5vw;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h3{
+  display:none;
+  font-size: 20px;
+  border: 1px solid black;
+  padding:10px 15px;
+  border-radius: 30px;
+}
+.list{
+  display: flex;
+  list-style: none;
+  gap:20px;
+  overflow: hidden;
+}
+.menu{
+  list-style: none;
+  display:none;
+}
+.menu li{
+  font-size: 20px;
+  border: 1px solid black;
+  padding:10px 15px;
+  border-radius: 30px;
+}
+.list li{
+  font-size: 20px;
+  border: 1px solid black;
+  padding:10px 15px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.list li:hover{
+  color:white;
+  z-index: 1;
+}
+.list li:hover::after{
+  top:0;
+  z-index: -1;
+}
+.list li::after{
+  position: absolute;
+  content:" ";
+  background-color: black;
+  width:100%;
+  height:100%;
+  color: black;
+  left:0;
+  top:45px;
+  border-radius: 30px;
+  transition: all ease 0.3s;
+}
+.first1{
+  border-bottom: 1px solid black;
+  width:100%;
+  height:70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.left{
+  width:26vw;
+}
+.left p{
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 35px;
+}
+.right h1{
+  font-size: 130px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 8vw;
+
+}
+.first video{
+  position: relative;
+  width:100%;
+  border-radius: 30px;
+  margin-top: 5vw;
+}
+.hero{
+  position: absolute;
+  width:40vw;
+  height:35vw;
+  right:0;
+  top:70vh;
+}
+.hero1{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: red;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+}
+.hero2{
+  position: absolute;
+  width:80%;
+  height:80%;
+  background-color:red;
+  border-radius: 50%;
+  animation-name: move2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(20px);
+}
+.hero3{
+  position: absolute;
+  width:80%;
+  height:80%;
+  background-color:red;
+  border-radius: 50%;
+  animation-name: move1;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(20px);
+}
+@keyframes move1 {
+  from{
+    transform: translate(-10%,5%);
+  }
+  to{
+    transform: translate(10%,-5%);
+  }
+}
+@keyframes move2 {
+  from{
+    transform: translate(-0%,10%);
+  }
+  to{
+    transform: translate(20%,-5%);
+  }
+}
+.page2{
+  min-height: 100vh;
+  width:100%;
+  padding-top: 5vw;
+  position: relative;
+  background-color: rgb(249, 249, 246);
+}
+.moving{
+  width:100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.moving::-webkit-scrollbar{
+  display:none;
+}
+.col{
+  width:25px;
+  height:25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin:1vw 2vw;
+}
+.move{
+  display: inline-block;
+  animation-name: movee;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.move h1{
+  font-size: 6vw;
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes movee {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+.page2b{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 3vw;
+  background-color: rgb(249, 249, 246);
+}
+.page2b h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.5vw;
+  width:50%;
+  line-height: 4vw;
+  margin-top: -5vw;
+  z-index: 9;
+}
+.page2bb{
+  width:20%;
+  margin-top: 10vw;
+}
+.page2bb img{
+  width:100%;
+  border-radius: 20px;
+}
+.page2bb p{
+  margin-top: 2vw;
+  font-size: 16px;
+  font-weight: 500;
+}
+.gogo{
+  width:25vw;
+  height:25vw;
+  background:linear-gradient(to top right,red,rgb(255, 191, 0));
+  border-radius: 50%;
+  position: absolute;
+  top:60%;
+  left:25%;
+  filter: blur(20px);
+  animation-name: hillo;
+  animation-duration: 3s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes hillo {
+  from{
+    transform: translate(10%,-10%) skew(0);
+  }
+  to{
+    transform: translate(-10%,10%) skew(10deg);
+  }
+}
+.page3{
+  min-height:100vh;
+  width:100%;
+  background-color: rgb(249, 249, 246);
+}
+.page31{
+  width:100%;
+  min-height: 100vh;
+  z-index: 9;
+  overflow: hidden;
+  position: relative;
+}
+.one{
+  position: relative;
+  overflow: hidden;
+}
+.one::before{
+  content: "";
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color:rgb(251, 161, 78);
+  top:-100%;
+  transition: 0.2s ease;
+  z-index: -1;
+}
+.one:hover::before{
+  top:0%;
+}
+.one h2{
+  font-size: 4vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding:20px 30px;
+  border-bottom: 1px solid rgb(149, 149, 149);
+  z-index: 99;
+}
+.imagevala{
+  position:fixed;
+  width:25vw;
+  height:31vw;
+  /* background-color: red; */
+  border:1px solid black;
+  border-radius: 20px;
+  z-index: 999;
+  left:55%;
+  top:15%;
+  display: none;
+  background-position: 100% 100%;
+}
+
+
+
+
+.page4{
+  width:100%;
+  height:80vh;
+  padding:80px 0;
+  background-color: white;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align:start;
+  font-size: 18px;
+  background: #fff;
+  border-left: 1px solid black;
+
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  width: 30%;
+  padding:20px;
+}
+.swiper-slide h2{
+   font-size: 3vw;
+}
+.swiper-slide p{
+  margin-top: 30px;
+  font-size: 20px;
+}
+.page5{
+  width:100%;
+  min-height:100vh;
+}
+.page6{
+  width:100%;
+  min-height:10vh;
+}
+.footer{
+  position: fixed;
+    min-height:100vh;
+  width:100%;
+  background-color:red;
+  color:white;
+  bottom: 0;
+  z-index: 9;
+  text-align: center;
+
+}
+.foot1{
+  width:100%;
+  height:30vh;
+  margin-top: 50px;
+  display:flex;
+  text-align: start;
+}
+.foot11{
+  width:60%;
+  padding:20px 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.foot11 h1{
+  font-size: 2.5vw;
+}
+.foot12{
+  width:calc(100%-60%);
+  padding:20px 100px;
+  font-size: 20px;
+}
+.foot12 h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.foot2{
+  width:98%;
+  margin:auto;
+}
+.foot2 h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 23vw;
+  border-bottom: 1px solid white;
+}
+.foot3 h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  padding:0.5vw 0;
+}
+.golla{
+  position: fixed;
+  width:120vw;
+  height:50vw;
+  background-color: black;
+  bottom: -50%;
+  left: -20%;
+  z-index: -1;
+  filter: blur(40px);
+  border-radius: 30%;
+  animation-name: movie;
+  animation-duration: 4s;
+  animation-timing-function:ease-in ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes movie {
+  from{
+      transform: translate(15%,20%) skew(0deg);
+  }
+  to{
+    transform: translate(1%,-15%) skew(20deg);
+  }
+  
+}
+.loaderr{
+  width:100%;
+  height:100vh;
+  background-color: black;
+  position: fixed;
+  z-index: 9999;
+  top:0;
+  transition: all ease 1.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+.loaderr h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 4vw;
+  position: absolute;
+  background: linear-gradient(to right, red,orange);
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+.loaderr h1:nth-child(2){
+  animation-delay: 2s;
+}
+.loaderr h1:nth-child(3){
+  animation-delay: 3s;
+}
+
+@keyframes load {
+  0%{
+    opacity:0;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@media (max-width:600px) {
+  nav{
+    height:auto;
+    width:100%;
+    position: relative;
+    z-index: 100;
+    background-color: rgb(249, 249, 246);
+    margin: 0;
+  }
+  .list{
+    display:none;
+  }
+  nav h3{
+    display:block;
+  }
+
+  .kalla{
+    display: block;
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.367);
+    z-index: 99;
+    top:-100%;
+    transition: all ease 0.5s;
+  }
+  .kalla1{
+    width:100%;
+    height:50%;
+    background-color: rgb(249, 249, 246);
+    padding-top: 100px;
+    padding-right: 20px;
+    text-align: end;
+  }
+  .kalla1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6vw;
+  }
+
+
+
+  .first1{
+    border-bottom: 1px solid black;
+    width:100%;
+    height:70vh;
+    padding-bottom: 50px;
+    flex-direction: column-reverse;
+  }
+  .left{
+    width:100%;
+    display: flex;
+    align-items: start;
+    padding-right: 110px;
+    position: relative;
+    z-index: 9;
+  }
+  .left p{
+    font-size: 21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 20px;
+  }
+  .right{
+    text-align: end;
+  }
+  .right h1{
+    padding-top: 50px;
+    font-size: 66px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 13vw;
+  
+  }
+  .first{
+    padding:20px 20px;
+  }
+  .first video{
+    position: relative;
+    width:100%;
+    height:90vh;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 5vw;
+  }
+  .hero{
+    position: absolute;
+    width:80vw;
+    height:65vw;
+    right:0;
+    top:70vh;
+  }
+  .hero1{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: red;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+  }
+  .hero2{
+    position: absolute;
+    width:80%;
+    height:80%;
+    background-color:red;
+    border-radius: 50%;
+    animation-name: move2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(20px);
+  }
+  .hero3{
+    position: absolute;
+    width:80%;
+    height:80%;
+    background-color:red;
+    border-radius: 50%;
+    animation-name: move1;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(20px);
+  }
+
+
+  .col{
+    width:27px;
+    height:27px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin:2vw 2vw;
+  }
+  .move h1{
+    font-size: 16vw;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .page2{
+    overflow: hidden;
+  }
+  .page2b{
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 3vw;
+    background-color: rgb(249, 249, 246);
+    flex-direction: column;
+    align-items: start;
+  }
+  .page2b h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7vw;
+    width:100%;
+    line-height: 7.2vw;
+    margin-top: 15vw;
+    z-index: 9;
+  }
+
+  .page2bb{
+    width:70%;
+    margin-top: 10vw;
+    margin-bottom: 15vw;
+  }
+  .page2bb img{
+    width:100%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 9;
+  }
+  .page2bb p{
+    margin-top: 2vw;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    z-index: 9;
+  }
+  .gogo{
+    width:85vw;
+    height:95vw;
+    background:linear-gradient(to top right,red,rgb(255, 191, 0));
+    border-radius: 50%;
+    position: absolute;
+    top:30%;
+    left:45%;
+    filter: blur(20px);
+    animation-name: hillo;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .page5{
+    width:100%;
+    height:100vh;
+  }
+
+
+
+  .footer{
+    position: fixed;
+      min-height:100vh;
+    width:100%;
+    background-color:red;
+    color:white;
+    bottom: 0;
+    z-index: 9;
+    text-align: center;
+  
+  }
+  .foot1{
+    width:100%;
+    height:30vh;
+    margin-top: 100px;
+    display:flex;
+    text-align: start;
+    flex-direction: column;
+    position: relative;
+    z-index: 9;
+  }
+  .foot11{
+    width:100%;
+    padding:20px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .foot11 h1{
+    font-size: 7.5vw;
+  }
+  .foot12{
+    width:100%;
+    padding:0 60px 20px 20px;
+    font-size: 18px;
+    line-height: 6vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+  }
+  .foot12 h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .foot2{
+    width:100%;
+    margin:auto;
+    margin-top: 30vw;
+    position: absolute;
+    z-index: 9;
+  }
+  .foot2 h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 23vw;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+  }
+  .foot3 h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding:0.5vw 0;
+    margin-top: 65vw;
+    position: relative;
+    z-index: 9;
+  }
+  .golla{
+    position: fixed;
+    width:150vw;
+    height:120vw;
+    background-color: black;
+    bottom: -20%;
+    left: -40%;
+    z-index: 9;
+    filter: blur(40px);
+    border-radius: 30%;
+    animation-name: movie;
+    animation-duration: 4s;
+    animation-timing-function:ease-in ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .loaderr{
+    transition: all ease 0.3s;
+  }
+  .loaderr h1{
+    font-size: 6vw;
+  }
+
+}
+
