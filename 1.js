@@ -37,7 +37,7 @@ menu.addEventListener("click",function(){
     kalla.style.top=0;
     flag=1;
   }else{
-    kalla.style.top="-100%";
+    kalla.style.top="-120%";
     flag=0;
   }
 });
