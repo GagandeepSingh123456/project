@@ -262,7 +262,7 @@ nav h3{
   }
 }
 .page3{
-  min-height:100vh;
+  height:110vh;
   width:100%;
   background-color: rgb(249, 249, 246);
 }
@@ -776,5 +776,13 @@ nav h3{
     transition: all ease 0.5s;
   }
 
+}
+@media(max-width:451px){
+  .page3{
+    height:80vh;
+  }
+  .swiper-slide{
+    width:80%;
+  }
 }
 
