@@ -43,7 +43,7 @@ menu.addEventListener("click",function(){
 });
 var loaderr=document.querySelector(".loaderr");
 setTimeout(function(){
-  loaderr.style.top="-100%";
+  loaderr.style.top="-120%";
 },3400)
 
 
